@@ -43,7 +43,7 @@
 }
 
 .back {
-  transform: translateZ(-100px) scale(2);
+  transform: translateZ(-50px) scale(1.5);
   /* 
     IMPORTANT! 
       TranslateZ: TranslateZ pushes layer back so it scrolls slower and appears 
@@ -63,11 +63,10 @@
 }
 
 .midd {
-  transform: translateZ(-50px) scale(1.5);
+  transform: translateZ(-100) scale(2);
   background-image: url("img/byanihan1.png");
   background-size:cover;
   background-position: center;
-  background-attachment: fixed;
   z-index:1;
 }
 
