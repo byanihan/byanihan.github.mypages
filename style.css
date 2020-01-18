@@ -13,7 +13,6 @@
   height:100%;
   width:100%;
   z-index:-2;
-  background-image: url("img/bg.jpg");
   background-size:cover;
   background-position: left center;
 }
@@ -54,7 +53,7 @@
 }
 
 .back {
-  transform: translateZ(-100px) scale(2);
+  transform: translateZ(-50px) scale(1.5);
   /* 
     IMPORTANT! 
       TranslateZ: TranslateZ pushes layer back so it scrolls slower and appears 
@@ -66,30 +65,30 @@
       layer). The formula is: 
         ((translateZ * -1) / perspective) + 1 
   */
-  background-image: url("img/byanihan1.png");
+  background-image: url("img/bg.jpg");
+  
   background-size:cover;
-  background-position: center;
+  background-position: left center;
   z-index:-1;
 
 }
 
 .midd {
-  transform: translateZ(-50) scale(1.5);
+  transform: translateZ(-200px) scale(3);
+  background-image: url("img/byanihan1.png");
   background-size:cover;
   background-position: center;
-  position:fixed;
-  left:0;
   z-index:1;
 }
 
 .fore {
-  transform: translateZ(100) scale(.5);
+  transform: translateZ(0px) scale(1);
   /* Zero value for translateZ property makes foreground scroll normally.
   No scale value is needed because this layer is not translated.
   NOTE: TranslateZ value can be greater than 0 for extreme foreground. */
   background-image: url("img/treeline-midd.png");
+  top:60%;
   background-position: center;
-  top: 60%;
   background-size:cover; 
   z-index: 2;
 }
