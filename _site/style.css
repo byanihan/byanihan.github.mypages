@@ -4,8 +4,8 @@
   box-sizing:border-box;
   scroll-behavior:smooth;
   top,left,right:0;
-  width:100vw;
-  height:100vh;
+  width:100%;
+  height:100%;
 }
 
 .logo{
@@ -19,8 +19,8 @@
 
 
 .parallax-container { /* Parent element for all three layers */
-  height:100vh;
-  width:100vw;
+  height:100%;
+  width:100%;
   overflow-x: hidden; /* Restrict scroll movement with overflow */
   overflow-y: scroll;
   perspective: 100px;
