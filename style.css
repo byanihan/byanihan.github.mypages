@@ -1,0 +1,167 @@
+*, html, body{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+  top,left,right:0;
+  width:100vw;
+  height:100vh;
+}
+
+.parallax-container { /* Parent element for all three layers */
+  height: 100vh;
+  width:100vw;
+  overflow-x: hidden; /* Restrict scroll movement with overflow */
+  overflow-y: scroll;
+  perspective: 100px;
+  position:absolute;
+  background-color:pink;
+  background-size:contain;
+
+  /* 
+    IMPORTANT! Parent's perspective property determines strength of perspective effect 
+  */
+}
+
+.parallax-container::-webkit-scrollbar {
+  display: none;
+  }
+
+
+.layer { /* These are values shared by all three layers. */
+  position: absolute; /* Layer positioning is important */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height:100vh;
+  width:100vw;
+  background-position: center;
+
+
+  background-repeat: no-repeat;
+}
+
+.back {
+  transform: translateZ(-100px) scale(2);
+  /* 
+    IMPORTANT! 
+      TranslateZ: TranslateZ pushes layer back so it scrolls slower and appears 
+      farther away. 
+      
+      Scale: Scale will scale layer back up to fit screen while retaining 
+      perspective effect. The value of scale depends on the values of 
+      perspective (see parent element above) and translateZ (for the given 
+      layer). The formula is: 
+        ((translateZ * -1) / perspective) + 1 
+  */
+  background-image: url("img/bg.jpg");
+  background-size:cover;
+  background-position: left;
+  z-index:-1;
+
+}
+
+.midd {
+  transform: translateZ(-50px) scale(1.5);
+  background-image: url("img/byanihan1.png");
+  background-size:cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index:1;
+}
+
+.fore {
+  transform: translateZ(50) scale(0.5);
+  /* Zero value for translateZ property makes foreground scroll normally.
+  No scale value is needed because this layer is not translated.
+  NOTE: TranslateZ value can be greater than 0 for extreme foreground. */
+  background-image: url("img/treeline-midd.png");
+  background-position: center;
+  top: 60%;
+  background-size:cover; 
+  z-index: 1;
+}
+
+.hello{
+  position:absolute;
+  height:100%;
+  width:100%;
+  z-index: 2;
+  top:100%;
+  background:rgb(23,17,7);
+  box-sizing:border-box;
+  padding:10%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  vertical-align: center;
+}
+.text{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  border:2px dotted white;
+  vertical-align: center;
+  width:100%;
+  height:100%;
+  padding:5%;
+  box-sizing:border-box;
+  font-family: 'josefin sans', sans-serif;
+  font-size:1em;
+  overflow-y:scroll;
+}
+
+h1{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align: center;
+  font-family: 'Monoton', sans-serif;
+  font-weight:400;
+  font-style:normal;
+  font-size:2em;
+  color:white;
+  line-height: 1.2;
+  letter-spacing:0.1em;
+  text-shadow:none;
+  width:100%;
+  height:auto;
+}
+
+p {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align: center;
+  width:100%;
+  height:auto;
+  padding:10% 5%;
+  color:white;
+  line-height: 1.5;
+}
+
+a{
+  display:inline-block;
+  text-align: center;
+  padding:.5em 1em;
+  height:auto;
+  width:100px;
+  margin-left:calc(50% - 50px);
+  border:thin solid white;
+  border-radius: 5px;
+  color:white;
+  text-decoration: none;
+  z-index:5;
+}
+a:hover{
+  background:white;
+  color:rgb(23,17,7);
+  transition:1s;
+
+}
+
+
+
+
+/* Learn more about CSS parallax: http://keithclark.co.uk/articles/pure-css-parallax-websites/ */
