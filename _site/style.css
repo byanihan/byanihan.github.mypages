@@ -1,4 +1,4 @@
-*, html, body{
+*, html, body,{
   margin:0;
   padding:0;
   box-sizing:border-box;
@@ -6,27 +6,40 @@
   top,left,right:0;
   width:100%;
   height:100%;
+  font-family: 'josefin sans', sans-serif;
+  font-size:1em;
 }
 
-.logo{
-  position: fixed;
-  height:100%;
-  width:100%;
-  z-index:-2;
-  background-size:cover;
-  background-position: left center;
+.title{
+  display:block;
+  top:2em;
+  left:0;
+  right:0;
+  text-align: center;
+  position:fixed;
+  z-index: 1000;
+  font-family: 'josefin sans', sans-serif;
+  font-size:1em;
+  color:white;
 }
+
 
 
 .parallax-container { /* Parent element for all three layers */
   height:100%;
   width:100%;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
   overflow-x: hidden; /* Restrict scroll movement with overflow */
   overflow-y: scroll;
   perspective: 100px;
   position:absolute;
   background-color:transparent;
   background-size:contain;
+  overflow-x: hidden; /* Restrict scroll movement with overflow */
+  overflow-y: scroll;
 
   /* 
     IMPORTANT! Parent's perspective property determines strength of perspective effect 
@@ -53,8 +66,7 @@
 }
 
 .back {
-  
-  transform: translateZ(-200px) scale(3);
+  transform: translateZ(-50px) scale(1.5);
   /* 
     IMPORTANT! 
       TranslateZ: TranslateZ pushes layer back so it scrolls slower and appears 
@@ -75,7 +87,7 @@
 }
 
 .midd {
-  transform: translateZ(-50px) scale(1.5);
+  transform: translateZ(-200px) scale(3);
   background-image: url("img/byanihan1.png");
   background-size:cover;
   background-position: center;
@@ -100,6 +112,7 @@
   width:100%;
   z-index: 10;
   top:100%;
+  bottom:0;
   background:rgb(23,17,7);
   box-sizing:border-box;
   padding:15% 10%;
@@ -120,13 +133,13 @@
   box-sizing:border-box;
   font-family: 'josefin sans', sans-serif;
   font-size:1em;
-  overflow-y:scroll;
+  overflow-y: scroll;
 }
 
 h1{
   display:flex;
   justify-content:center;
-  align-items:center;
+  align-items:flex-end;
   text-align: center;
   font-family: 'Monoton', sans-serif;
   font-weight:400;
@@ -138,6 +151,7 @@ h1{
   text-shadow:none;
   width:100%;
   height:auto;
+  box-sizing:border-box;
 }
 
 p {
@@ -147,9 +161,10 @@ p {
   text-align: center;
   width:100%;
   height:auto;
-  padding:10% 5%;
+  padding:0 2em 2em;
   color:white;
   line-height: 1.5;
+  box-sizing:border-box;
 }
 
 a{
@@ -164,6 +179,7 @@ a{
   color:white;
   text-decoration: none;
   z-index:5;
+  box-sizing:border-box;
 }
 a:hover{
   background:white;
