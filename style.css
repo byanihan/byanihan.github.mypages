@@ -46,9 +46,32 @@
   */
 }
 
+@media only screen and (max-width: 480px) and (-webkit-device-pixel-ratio:3){
+  .parallax-container{
+    perspective:0px;
+  }
+
+  .back{
+    transform:translateZ(0px) !important;
+  }
+  .midd{
+    transform:translateZ(0px)!important;
+  }
+  .fore{
+    transform:translateZ(0px)!important;
+  }
+
+  .midd {
+    background-size:contain;
+    box-sizing:border-box;
+  }
+}
+
 .parallax-container::-webkit-scrollbar {
   display: none;
   }
+
+
 
 
 .layer { /* These are values shared by all three layers. */
