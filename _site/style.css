@@ -89,6 +89,7 @@
   bottom: 0;
   height:100%;
   width:100%;
+  background-repeat: no-repeat;
 }
 
 .back {
@@ -115,7 +116,7 @@
   transform: translateZ(-50px) scale(1.5);
   
   background-image: url("img/byanihan1.png");
-  background-size:cover;
+  background-size:contain;
   background-position: center;
   z-index:1;
 }
