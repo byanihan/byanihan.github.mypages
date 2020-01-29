@@ -59,6 +59,7 @@
   }
 
   .back{
+    background-size:contain;
     transform:translateZ(0px) !important;
   }
   .midd{
