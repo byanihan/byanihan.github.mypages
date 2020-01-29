@@ -53,33 +53,10 @@
   */
 }
 
-@media only screen and (orientation: portrait){
-  .parallax-container{
-    perspective:0px;
-  }
-
-  .back{
-    transform:translateZ(0px) scale(1)!important;
-  }
-  .midd{
-    transform:translateZ(0px) scale(1)!important;
-  }
-  .fore{
-    transform:translateZ(0px) scale(1)!important;
-  }
-
-  .midd {
-    background-size:contain;
-    box-sizing:border-box;
-  }
-}
 
 .parallax-container::-webkit-scrollbar {
   display: none;
   }
-
-
-
 
 .layer { /* These are values shared by all three layers. */
   position: absolute; /* Layer positioning is important */
@@ -216,6 +193,25 @@ a:hover{
 }
 
 
+@media only screen and (orientation: portrait){
+  .parallax-container{
+    perspective:0px;
+  }
+  .back{
+    transform:translateZ(0px) scale(1)!important;
+    border:thick solid red;
+  }
+  .midd{
+    transform:translateZ(0px) scale(1)!important;
+  }
+  .fore{
+    transform:translateZ(0px) scale(1)!important;
+  }
 
+  .midd {
+    background-size:contain;
+    box-sizing:border-box;
+  }
+}
 
 /* Learn more about CSS parallax: http://keithclark.co.uk/articles/pure-css-parallax-websites/ */
