@@ -45,6 +45,7 @@
   scroll-behavior:smooth;
   -ms-scroll-behavior:smooth;
   -webkit-overflow-scrolling:touch
+}
 
   /* 
     IMPORTANT! Parent's perspective property determines strength of perspective effect 
