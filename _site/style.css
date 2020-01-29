@@ -59,13 +59,13 @@
   }
 
   .back{
-    transform:translateZ(0px) !important;
+    transform:translateZ(0px) scale(1)!important;
   }
   .midd{
-    transform:translateZ(0px)!important;
+    transform:translateZ(0px) scale(1)!important;
   }
   .fore{
-    transform:translateZ(0px)!important;
+    transform:translateZ(0px) scale(1)!important;
   }
 
   .midd {
