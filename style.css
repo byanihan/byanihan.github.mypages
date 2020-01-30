@@ -202,6 +202,7 @@ a:hover{
   }
   .midd{
     transform:translateZ(0px) scale(1)!important;
+    position:fixed;
   }
   .fore{
     transform:translateZ(0px) scale(1)!important;

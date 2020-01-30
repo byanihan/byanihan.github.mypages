@@ -199,10 +199,10 @@ a:hover{
   }
   .back{
     transform:translateZ(0px) scale(1)!important;
-    border:thick solid red;
   }
   .midd{
     transform:translateZ(0px) scale(1)!important;
+    position:fixed;
   }
   .fore{
     transform:translateZ(0px) scale(1)!important;
